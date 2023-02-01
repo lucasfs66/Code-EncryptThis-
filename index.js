@@ -24,6 +24,7 @@ encryptThis("hello world") === "104olle 119drlo"
 
 let encryptThis = function(text) {
     let result = ""
+    let arrayOfWords = text.split(" ")
     let numberSwicth = {
         "A": 65,
         "B": 66,
@@ -78,14 +79,16 @@ let encryptThis = function(text) {
         "y": 121,
         "z": 122
     }
-    for(g = 0; g < )
-    for(let i = 0; i < text.length; i++){
-        if(i === 1){
-            result += text[text.length - 1]
-        } else if(i === text.length - 1){
-            result += text[1]
-        } else{
-            result += text[i]
+    for(g = 0; g < arrayOfWords.length; g++){
+
+        for(let i = 0; i < arrayOfWords[g].length; i++){
+            if(i === 1){
+                result += arrayOfWords[g][text.length - 1]
+            } else if(i === arrayOfWords[g].length - 1){
+                result += arrayOfWords[g][1]
+            } else{
+                result += arrayOfWords[g][i]
+            }
         }
     }
 
