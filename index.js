@@ -82,14 +82,18 @@ let encryptThis = function(text) {
     for(g = 0; g < arrayOfWords.length; g++){
 
         for(let i = 0; i < arrayOfWords[g].length; i++){
-            if(i === 1){
-                result += arrayOfWords[g][text.length - 1]
+            if(i === 0){
+                result += `${numberSwicth[arrayOfWords[g][i]]}`
+            } else if(i === 1){
+                result += arrayOfWords[g][arrayOfWords[g].length - 1]
             } else if(i === arrayOfWords[g].length - 1){
                 result += arrayOfWords[g][1]
             } else{
                 result += arrayOfWords[g][i]
             }
         }
+
+        result += " "
     }
 
     console.log(result)
